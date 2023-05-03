@@ -474,15 +474,29 @@ let TesterNode = document.querySelector(".block")
 let TesterPosition = "Features"
 let TesterValue = "Keen Sight"
 
-document.getElementById("ADMINTEST1").onclick = sort
+if (document.querySelectorAll("ADMINTEST1").length > 0) {
+    document.getElementById("ADMINTEST1").onclick = sort
+}
 
 function TESTER() {
     alert("WORKS")
 }
+if (document.querySelectorAll("SetPageOne").length > 0) {
+    document.getElementById("SetPageOne").onclick = TESTER
+}
 
-document.getElementById("SetPageOne").onclick = TESTER
-document.getElementById("SetPageTwo").onclick = displayForm
-document.getElementById("SetPageThree").onclick = displayForm
-document.getElementById("SetPageFour").onclick = displayForm
+if (document.querySelectorAll("SetPageTwo").length > 0) {
+    document.getElementById("SetPageTwo").onclick = displayForm
+}
 
-document.getElementById("Cancel").onclick = hideForm
+if (document.querySelectorAll("SetPageThree").length > 0) {
+    document.getElementById("SetPageThree").onclick = displayForm
+}
+
+if (document.querySelectorAll("SetPageFour").length > 0) {
+    document.getElementById("SetPageFour").onclick = displayForm
+}
+
+if (document.querySelectorAll("Cancel").length > 0) {
+    document.getElementById("Cancel").onclick = hideForm
+}
