@@ -480,10 +480,9 @@ function TESTER() {
     alert("WORKS")
 }
 
-if (document.querySelectorAll(".SetPageOne").length > 0) {
-    document.getElementById("SetPageOne").onclick = TESTER
-    alert("SetPageOne button Active")
-}
+document.getElementById("SetPageOne").onclick = TESTER
+alert("SetPageOne button Active")
+
 
 if (document.querySelectorAll(".SetPageTwo").length > 0) {
     document.getElementById("SetPageTwo").onclick = displayForm
