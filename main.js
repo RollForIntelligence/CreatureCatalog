@@ -481,24 +481,13 @@ function TESTEr() {
 }
 alert("reached 482")
 
-let space = document.querySelector("button.SetPageOne")
-space
-alert("SetPageOne button Active")
+document.querySelector("button.SetPageOne").addEventListener('click', TESTEr)
+
+document.querySelector("button.SetPageTwo").addEventListener('click', displayForm)
+document.querySelector("button.SetPageThree").addEventListener('click', displayForm)
+document.querySelector("button.SetPageFour").addEventListener('click', displayForm)
 
 
-if (document.querySelectorAll(".SetPageTwo").length > 0) {
-    document.body.getElementById("SetPageTwo").onclick = displayForm
-}
+document.querySelector("button.Cancel").addEventListener('click', hideForm)
 
-if (document.querySelectorAll(".SetPageThree").length > 0) {
-    document.body.getElementById("SetPageThree").onclick = displayForm
-}
-
-if (document.querySelectorAll(".SetPageFour").length > 0) {
-    document.body.getElementById("SetPageFour").onclick = displayForm
-}
-
-if (document.querySelectorAll(".Cancel").length > 0) {
-    document.body.getElementById("Cancel").onclick = hideForm
-}
 
