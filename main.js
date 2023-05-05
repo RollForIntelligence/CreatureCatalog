@@ -467,7 +467,7 @@ function hideForm() {
     document.querySelector(".LinksToPages").style.display = 'block'
 }
 
-let TesterNode = document.querySelector(".block")
+let TesterNode = document.body.querySelector(".block")
 let TesterPosition = "Features"
 let TesterValue = "Keen Sight"
 
@@ -476,27 +476,29 @@ if (document.querySelectorAll(".ADMINTEST1").length > 0) {
 }
 
 
-function TESTER() {
+function TESTEr() {
     alert("WORKS")
 }
+alert("reached 482")
 
-document.getElementById("SetPageOne").onclick = TESTER
+let space = document.querySelector("button.SetPageOne")
+space
 alert("SetPageOne button Active")
 
 
 if (document.querySelectorAll(".SetPageTwo").length > 0) {
-    document.getElementById("SetPageTwo").onclick = displayForm
+    document.body.getElementById("SetPageTwo").onclick = displayForm
 }
 
 if (document.querySelectorAll(".SetPageThree").length > 0) {
-    document.getElementById("SetPageThree").onclick = displayForm
+    document.body.getElementById("SetPageThree").onclick = displayForm
 }
 
 if (document.querySelectorAll(".SetPageFour").length > 0) {
-    document.getElementById("SetPageFour").onclick = displayForm
+    document.body.getElementById("SetPageFour").onclick = displayForm
 }
 
 if (document.querySelectorAll(".Cancel").length > 0) {
-    document.getElementById("Cancel").onclick = hideForm
+    document.body.getElementById("Cancel").onclick = hideForm
 }
 
