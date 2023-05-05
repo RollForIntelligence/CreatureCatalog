@@ -458,12 +458,12 @@ function sort() {
 }
 
 function displayForm() {
-    document.querySelector(".FilterForm").style.display = 'block'
+    document.getElementById("FilterForm").style.display = 'block'
     document.querySelector(".LinksToPages").style.display = 'none'
 }
 
 function hideForm() {
-    document.querySelector(".FilterForm").style.display = 'none'
+    document.getElementById("FilterForm").style.display = 'none'
     document.querySelector(".LinksToPages").style.display = 'block'
 }
 
@@ -479,9 +479,8 @@ if (document.querySelectorAll(".ADMINTEST1").length > 0) {
 function TESTEr() {
     alert("WORKS")
 }
-alert("reached 482")
 
-document.querySelector("button.SetPageOne").addEventListener('click', TESTEr)
+document.querySelector("button.SetPageOne").addEventListener('click', displayForm)
 
 document.querySelector("button.SetPageTwo").addEventListener('click', displayForm)
 document.querySelector("button.SetPageThree").addEventListener('click', displayForm)
