@@ -467,9 +467,16 @@ function hideForm() {
     document.querySelector(".LinksToPages").style.display = 'block'
 }
 
-let TesterNode = document.body.querySelector(".block")
-let TesterPosition = "Features"
-let TesterValue = "Keen Sight"
+function ChangeDisplayedCriteria() {
+    let criteriaValue = document.getElementById("selector").value
+    let fieldList = document.querySelectorAll("div.field")
+    for (let i = 1; i < fieldList.length; i++) {
+        fieldList[i].style.display = 'none'
+    }
+    document.querySelector(`div.${criteriaValue}`).style.display = 'block'
+}
+
+
 
 if (document.querySelectorAll(".ADMINTEST1").length > 0) {
     document.getElementById("ADMINTEST1").onclick = sort
@@ -486,6 +493,8 @@ document.querySelector("button.SetPageTwo").addEventListener('click', displayFor
 document.querySelector("button.SetPageThree").addEventListener('click', displayForm)
 document.querySelector("button.SetPageFour").addEventListener('click', displayForm)
 
+
+document.getElementById("selector").onchange = ChangeDisplayedCriteria
 
 document.querySelector("button.Cancel").addEventListener('click', hideForm)
 

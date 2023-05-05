@@ -34,6 +34,14 @@
         form {
             display: none;
         }
+
+        div.field {
+            display: none;
+        }
+
+        div.selector {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -68,137 +76,170 @@
         </div>
 
         <form id="FilterForm">
-            <div class="field">
+            <div class="field selector">
+                <label for="selector">Select Criteria: </label>
+                <select name="selector" id="selector" class="selector">
+                    <option value="species">Species</option>
+                    <option value="size">Size</option>
+                    <option value="category">Category</option>
+                    <option value="classification">Classification</option>
+                    <option value="alignment">Alignment</option>
+                    <option value="ac">Armor Class</option>
+                    <option value="hp">Hit Points</option>
+                    <option value="str">Strength</option>
+                    <option value="dex">Dexterity</option>
+                    <option value="con">Constitution</option>
+                    <option value="int">Intelligence</option>
+                    <option value="wis">Wisdom</option>
+                    <option value="cha">Charisma</option>
+                    <option value="speed">Movement Type</option>
+                    <option value="SaveProfs">Saving Throw Proficiency</option>
+                    <option value="SkillProfs">Skill Proficiency</option>
+                    <option value="Vulns">Vulnerability</option>
+                    <option value="DmgResist">Damage Resistance</option>
+                    <option value="DmgImmune">Damage Immunity</option>
+                    <option value="CondImmune">Condition Immunity</option>
+                    <option value="Senses">Sense</option>
+                    <option value="Langs">Language</option>
+                    <option value="Challenge">Challenge</option>
+                    <option value="Features">Feature</option>
+                    <option value="Reactions">Reaction</option>
+                    <option value="Legends">Legendary Action</option>
+                    <option value="Description">Description</option>
+                </select>
+            </div>
+
+            <div class="field species">
                 <label for="species">Species</label>
                 <input type="text" name="species" id="species">
             </div>
 
-            <div class="field">
+            <div class="field size">
                 <label for="size">Size</label>
                 <input type="text" name="size" id="size">
             </div>
 
-            <div class="field">
+            <div class="field category">
                 <label for="category">Category</label>
                 <input type="text" name="category" id="category">
             </div>
 
-            <div class="field">
+            <div class="field classification">
                 <label for="classification">Classification</label>
                 <input type="text" name="classification" id="class" placeholder="I.E. Human, Shapechanger, etc">
             </div>
 
-            <div class="field">
+            <div class="field alignment">
                 <label for="alignment">Alignment</label>
                 <input type="text" name="alignment" id="alignment">
             </div>
 
-            <div class="field">
+            <div class="field ac">
                 <label for="ac">Armor Class</label>
                 <input type="text" name="ac" id="ac">
             </div>
 
-            <div class="field">
+            <div class="field hp">
                 <label for="hp">Hit Points</label>
                 <input type="text" name="hp" id="hp">
             </div>
 
-            <div class="field">
+            <div class="field str">
                 <label for="str">Strength</label>
                 <input type="text" name="str" id="str">
             </div>
 
-            <div class="field">
+            <div class="field dex">
                 <label for="dex">Dexterity</label>
                 <input type="text" name="dex" id="dex">
             </div>
 
-            <div class="field">
+            <div class="field con">
                 <label for="con">Constitution</label>
                 <input type="text" name="con" id="con">
             </div>
 
-            <div class="field">
+            <div class="field int">
                 <label for="int">Intelligence</label>
                 <input type="text" name="int" id="int">
             </div>
             
-            <div class="field">
+            <div class="field wis">
                 <label for="wis">Wisdom</label>
                 <input type="text" name="wis" id="wis">
             </div>
 
-            <div class="field">
+            <div class="field cha">
                 <label for="cha">Charisma</label>
                 <input type="text" name="cha" id="cha">
             </div>
 
-            <div class="field">
+            <div class="field speed">
                 <label for="speed">Movement Type</label>
                 <input type="text" name="speed" id="speed">
             </div>
 
-            <div class="field">
+            <div class="field SaveProfs">
                 <label for="SaveProfs">Saving Throw Proficiency</label>
                 <input type="text" name="SaveProfs" id="SaveProfs">
             </div>
 
-            <div class="field">
+            <div class="field SkillProfs">
                 <label for="SkillProfs">Skill Proficiency</label>
                 <input type="text" name="SkillProfs" id="SkillProfs">
             </div>
 
-            <div class="field">
+            <div class="field Vulns">
                 <label for="Vulns">Vulnerability</label>
                 <input type="text" name="Vulns" id="Vulns">
             </div>
 
-            <div class="field">
+            <div class="field DmgResist">
                 <label for="DmgResist">Damage Resistance</label>
                 <input type="text" name="DmgResist" id="DmgResist">
             </div>
 
-            <div class="field">
+            <div class="field DmgImmune">
                 <label for="DmgImmune">Damage Immunity</label>
                 <input type="text" name="DmgImmune" id="DmgImmune">
             </div>
 
-            <div class="field">
+            <div class="field CondImmune">
                 <label for="CondImmune">Condition Immunity</label>
                 <input type="text" name="CondImmune" id="CondImmune">
             </div>
 
-            <div class="field">
+            <div class="field Senses">
                 <label for="Senses">Sense</label>
                 <input type="text" name="Senses" id="Senses">
             </div>
 
-            <div class="field">
+            <div class="field Langs">
                 <label for="Langs">Language</label>
                 <input type="text" name="Langs" id="Langs">
             </div>
 
-            <div class="field">
+            <div class="field Challenge">
                 <label for="Challenge">Challenge Rating</label>
                 <input type="text" name="Challenge" id="Challenge">
             </div>
 
-            <div class="field">
+            <div class="field Reactions">
                 <label for="Reactions">Reaction</label>
                 <input type="text" name="Reactions" id="Reactions">
             </div>
 
-            <div class="field">
+            <div class="field Legends">
                 <label for="Legends">Legendary Action</label>
                 <input type="text" name="Legends" id="Legends">
             </div>
 
-            <div class="field">
+            <div class="field Features">
                 <label for="Features">Feature</label>
                 <input type="text" name="Features" id="Features">
             </div>
 
-            <div class="field">
+            <div class="field Description">
                 <label for="Description">Description</label>
                 <input type="text" name="Description" id="Description">
             </div>
