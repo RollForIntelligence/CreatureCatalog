@@ -487,6 +487,24 @@ function TESTEr() {
     alert("WORKS")
 }
 
+function ReassessMins() {
+    let maxInputList = document.querySelectorAll("input.max")
+    let minInputList = document.querySelectorAll("input.min")
+
+    for (let i = 0; i < maxInputList.length; i++) {
+        maxInputList[i].min = minInputList[i].value
+    }
+}
+
+function ReassessMaxs() {
+    let maxInputList = document.querySelectorAll("input.max")
+    let minInputList = document.querySelectorAll("input.min")
+
+    for (let i = 0; i < minInputList.length; i++) {
+        minInputList[i].max = maxInputList[i].value
+    }
+}
+
 document.querySelector("button.SetPageOne").addEventListener('click', displayForm)
 
 document.querySelector("button.SetPageTwo").addEventListener('click', displayForm)
@@ -498,4 +516,11 @@ document.getElementById("selector").onchange = ChangeDisplayedCriteria
 
 document.querySelector("button.Cancel").addEventListener('click', hideForm)
 
+let maxInputList = document.querySelectorAll("input.max")
+let minInputList = document.querySelectorAll("input.min")
+
+for (let i = 0; i < maxInputList.length; i++) {
+    maxInputList[i].addEventListener("change", ReassessMins)
+    minInputList[i].addEventListener("change", ReassessMaxs)
+}
 
