@@ -179,37 +179,44 @@
 
             <div class="field hp">
                 <label for="hp">Hit Points</label>
-                <input type="text" name="hp" id="hp">
+                <input type="number" name="hp" id="hp-min" class="min" min="1" max="1000" step="1" value="1">
+                <input type="number" name="hp" id="hp-max" class="max" min="1" max="1000" step="1" value="100">
             </div>
 
             <div class="field str">
                 <label for="str">Strength</label>
-                <input type="text" name="str" id="str">
+                <input type="number" name="str" id="str-min" class="min" min="1" max="30" step="1" value="1">
+                <input type="number" name="str" id="str-max" class="max" min="1" max="30" step="1" value="30">
             </div>
 
             <div class="field dex">
                 <label for="dex">Dexterity</label>
-                <input type="text" name="dex" id="dex">
+                <input type="number" name="dex" id="dex-min" class="min" min="1" max="30" step="1" value="1">
+                <input type="number" name="dex" id="dex-max" class="max" min="1" max="30" step="1" value="30">
             </div>
 
             <div class="field con">
                 <label for="con">Constitution</label>
-                <input type="text" name="con" id="con">
+                <input type="number" name="con" id="con-min" class="min" min="1" max="30" step="1" value="1">
+                <input type="number" name="con" id="con-max" class="max" min="1" max="30" step="1" value="30">
             </div>
 
             <div class="field int">
                 <label for="int">Intelligence</label>
-                <input type="text" name="int" id="int">
+                <input type="number" name="int" id="int-min" class="min" min="1" max="30" step="1" value="1">
+                <input type="number" name="int" id="int-max" class="max" min="1" max="30" step="1" value="30">
             </div>
             
             <div class="field wis">
                 <label for="wis">Wisdom</label>
-                <input type="text" name="wis" id="wis">
+                <input type="number" name="wis" id="wis-min" class="min" min="1" max="30" step="1" value="1">
+                <input type="number" name="wis" id="wis-max" class="max" min="1" max="30" step="1" value="30">
             </div>
 
             <div class="field cha">
                 <label for="cha">Charisma</label>
-                <input type="text" name="cha" id="cha">
+                <input type="number" name="cha" id="cha-min" class="min" min="1" max="30" step="1" value="1">
+                <input type="number" name="cha" id="cha-max" class="max" min="1" max="30" step="1" value="30">
             </div>
 
             <div class="field speed">
@@ -356,7 +363,8 @@
 
             <div class="field Challenge">
                 <label for="Challenge">Challenge Rating</label>
-                <input type="text" name="Challenge" id="Challenge">
+                <input type="number" name="Challenge" id="Challenge-min" class="min" min="1" max="30" step="1" value="1">
+                <input type="number" name="Challenge" id="Challenge-max" class="max" min="1" max="30" step="1" value="30">
             </div>
 
             <div class="field Reactions">
