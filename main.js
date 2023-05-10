@@ -460,6 +460,7 @@ function sort() {
 function displayForm() {
     document.getElementById("FilterForm").style.display = 'block'
     document.querySelector(".LinksToPages").style.display = 'none'
+    StoreCriteria()
 }
 
 function hideForm() {
@@ -475,13 +476,6 @@ function ChangeDisplayedCriteria() {
     }
     document.querySelector(`div.${criteriaValue}`).style.display = 'block'
 }
-
-
-
-if (document.querySelectorAll(".ADMINTEST1").length > 0) {
-    document.getElementById("ADMINTEST1").onclick = sort
-}
-
 
 function TESTEr() {
     alert("WORKS")
@@ -505,6 +499,26 @@ function ReassessMaxs() {
     }
 }
 
+function RetrieveCriteria() {
+    return JSON.parse(localStorage.getItem("criteria"))
+}
+
+function StoreCriteria(criteriaToStore = [[['ac', 1, 300]]]) {
+    localStorage.setItem("criteria", JSON.stringify(criteriaToStore))
+}
+
+function AddCriteriaToAnds(newAnd = ["species", "Ernest"]) {
+    let criteria = RetrieveCriteria()
+    criteria[-1].push(newAnd)
+    StoreCriteria(criteria)
+}
+
+function StartNewOrBlock() {
+    let criteria = RetrieveCriteria()
+    criteria.push([])
+    StoreCriteria(criteria)
+}
+
 document.querySelector("button.SetPageOne").addEventListener('click', displayForm)
 
 document.querySelector("button.SetPageTwo").addEventListener('click', displayForm)
@@ -524,3 +538,5 @@ for (let i = 0; i < maxInputList.length; i++) {
     minInputList[i].addEventListener("change", ReassessMaxs)
 }
 
+// Local Storage carries over between links; No need for shenanigans
+document.getElementById("AddCriteria").addEventListener("click", AddCriteriaToAnds)
